@@ -10,12 +10,16 @@ body::before {
    
     z-index: -1;
 }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
 
 #countdown {
     font-size: 10em;
     color: white;
     text-align: center;
-    margin-top: 20px;
     font-family: 'Courier New', Courier, monospace;
-    
 }
