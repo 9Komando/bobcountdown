@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bob Countdown</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <section id="glowny">
+            
+            </section>
+        </header>
+        <main>
+            <p id="countdown"></p>
+            <script>
+                var docelowa = new Date("2025-07-18T00:00:00");
+                function updateCountdown() {
+                    var teraz = new Date();
+                    var roznica = docelowa - teraz;
+
+                    if (roznica <= 0) {
+                        document.getElementById("countdown").innerHTML = "Bob is here!!!1";
+                        return;
+                    }
+
+                    var dni = Math.floor(roznica / (1000 * 60 * 60 * 24));
+                    var godziny = Math.floor((roznica % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minuty = Math.floor((roznica % (1000 * 60 * 60)) / (1000 * 60));
+                    var sekundy = Math.floor((roznica % (1000 * 60)) / 1000);
+                    if (sekundy < 10) sekundy = "0" + sekundy;
+                    if (minuty < 10) minuty = "0" + minuty;
+                    if (godziny < 10) godziny = "0" + godziny;
+
+                    document.getElementById("countdown").innerHTML =
+                        dni + ":" + godziny + ":" + minuty + ":" + sekundy + "";
+                }
+                setInterval(updateCountdown, 1000);
+                updateCountdown();
+            </script>
+            
+        </main>
+    </body>
+</html>
