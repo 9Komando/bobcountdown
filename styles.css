@@ -12,11 +12,11 @@ body::before {
 }
 
 #countdown {
-    padding: 300px;
+    padding-top: 300px;
     font-size: 10em;
     color: white;
     text-align: center;
     margin-top: 20px;
     font-family: 'Courier New', Courier, monospace;
-    word-break: break-word;
+    
 }
